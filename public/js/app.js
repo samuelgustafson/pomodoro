@@ -19,6 +19,19 @@ function start(){
   }
 }
 function tick(){
+  if(secondsLeft === 0 && minutesLeft === 0){
+    clearInterval(timer);
+    timer = !timer;//dereference
+    if(isOnBreak){
+      numberOfBreaks += 1;
+      resetWorkTime();
+    } else {
+      resetBreakTime();
+    }
+    isOnBreak = !isOnBreak;
+    render();
+    return;
+  }
   decrementMinutes();
   decrementSeconds();
   render();
@@ -46,4 +59,17 @@ function pad(num){
   } else {
     return num;
   }
+}
+function resetWorkTime(){
+  minutesLeft = 00;
+  secondsLeft = 05;
+}
+function resetBreakTime(){
+  if(numberOfBreaks < 3){
+    minutesLeft = 5;
+  } else {
+    minutesLeft = 15;
+    numberOfBreaks = 0;
+  }
+  secondsLeft = 0;
 }
