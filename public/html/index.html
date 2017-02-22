@@ -26,7 +26,7 @@
       <hr>
       <div class="row">
         <div class="col-xs-8 col-xs-offset-2">
-          <input type="text" class="form-control" placeholder="Task" style="text-align: center" id='task'>
+          <input id="taskInput" type="text" class="form-control" placeholder="task name" style="text-align: center">
           <hr>
           <a id='start' href="#" class="btn btn-success btn-lg">
           <span class="glyphicon glyphicon-play"></span></a>
@@ -34,21 +34,48 @@
           <span class="glyphicon glyphicon-pause"></span></a>
           <a id='reset' href="#" class="btn btn-danger btn-lg">
           <span class="glyphicon glyphicon-step-backward"></span></a>
-        </div>
+          </div>
       </div>
     </div>
     <hr>
     <center>
     <h5>TASK LOG</h5>
     </center>
-    <div class="row well">
+    <div style:"color:#0000FF" class="row well">
       <div class="col-xs-8">
-      Sample Task</div>
-      <div class="col-xs-1">
-        <i class="fa fa-edit" style="font-size:17px"></i>
+        <ul style="list-style: none;">
+        <li>get bread</li>
+      </ul>
       </div>
       <div class="col-xs-1">
-        <i class="fa fa-trash-o" style="font-size:17px"></i>
+        <button <i class="fa fa-edit" style="font-size:17px"></i></button>
+      </div>
+      <div class="col-xs-1">
+      <button <i class="fa fa-trash-o" style="font-size:17px"></i></button>
+      </div>
+    </div><div style:"color:#0000FF" class="row well">
+      <div class="col-xs-8">
+        <ul style="list-style: none;">
+        <li>get milk</li>
+      </ul>
+      </div>
+      <div class="col-xs-1">
+        <button <i class="fa fa-edit" style="font-size:17px"></i></button>
+      </div>
+      <div class="col-xs-1">
+      <button <i class="fa fa-trash-o" style="font-size:17px"></i></button>
+      </div>
+    </div><div style:"color:#0000FF" class="row well">
+      <div class="col-xs-8">
+        <ul style="list-style: none;">
+        <li>take out trash</li>
+      </ul>
+      </div>
+      <div class="col-xs-1">
+        <button <i class="fa fa-edit" style="font-size:17px"></i></button>
+      </div>
+      <div class="col-xs-1">
+      <button <i class="fa fa-trash-o" style="font-size:17px"></i></button>
       </div>
     </div>
     <ul id="list"></ul>
